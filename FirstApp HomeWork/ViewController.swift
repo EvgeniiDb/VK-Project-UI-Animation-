@@ -25,13 +25,13 @@ class ViewController: UIViewController {
         
     }
     
-//    @IBAction func tapRegButton(_ sender: UIButton) {
-//        print("Введите номер телефона")
-//    }
-//
-//    @IBAction func tapForgPassButton(_ sender: UIButton) {
-//        print("Напомнить пароль")
-//    }
+    @IBAction func tapRegButton(_ sender: UIButton) {
+        print("Введите номер телефона")
+    }
+
+    @IBAction func tapForgPassButton(_ sender: UIButton) {
+        print("Напомнить пароль")
+    }
     
 }
 
@@ -39,6 +39,11 @@ private extension ViewController {
     func setupTextFields() {
         passwordTextField.keyboardType = .numberPad
     }
+    
+    internal override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true) //необходимо уточнить правильность написания данного кода
+    }
+    
 }
 
 

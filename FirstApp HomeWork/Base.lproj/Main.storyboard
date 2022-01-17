@@ -83,7 +83,10 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="aPy-6N-GRR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="0MZ-8Y-BLU"/>
+                            <constraint firstItem="aPy-6N-GRR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="0MZ-8Y-BLU">
+                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                            </constraint>
                             <constraint firstItem="pVc-o2-Q7M" firstAttribute="top" secondItem="be9-1g-EtQ" secondAttribute="bottom" constant="24" id="1oO-bW-x2Q"/>
                             <constraint firstItem="be9-1g-EtQ" firstAttribute="top" secondItem="16O-uE-jm6" secondAttribute="bottom" constant="24" id="6g3-5Z-m2V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DEf-32-Fm5" secondAttribute="trailing" constant="44" id="6ua-qc-anl"/>
