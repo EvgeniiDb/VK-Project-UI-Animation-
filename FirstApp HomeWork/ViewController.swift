@@ -21,8 +21,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnButton(_ sender: UIButton) {
-        print("didTapOnButton")
+        guard let loginText = loginTextField.text,
+              let passwordText = passwordTextField.text else {
+                  return
+              }
         
+        if loginText == "hello" && passwordText == "12345" {
+            print("Successfull login")
+        }
     }
     
     @IBAction func tapRegButton(_ sender: UIButton) {
@@ -37,6 +43,7 @@ class ViewController: UIViewController {
 
 private extension ViewController {
     func setupTextFields() {
+        loginTextField.keyboardType = .emailAddress
         passwordTextField.keyboardType = .numberPad
     }
     
