@@ -19,29 +19,27 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="вконтакте" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPy-6N-GRR">
                                 <rect key="frame" x="211.5" y="194" width="158.5" height="42"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEf-32-Fm5">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email или телефон" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEf-32-Fm5" userLabel="Login Text Field">
                                 <rect key="frame" x="44" y="260" width="326" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16O-uE-jm6">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16O-uE-jm6">
                                 <rect key="frame" x="44" y="321" width="326" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFj-0f-XYZ">
-                                <rect key="frame" x="268" y="382" width="102" height="31"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <rect key="frame" x="259.5" y="382" width="110.5" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="Ait-nV-xFe"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Registration">
+                                <buttonConfiguration key="configuration" style="plain" title="Регистрация">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -49,12 +47,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be9-1g-EtQ">
-                                <rect key="frame" x="44" y="382" width="140" height="31"/>
+                                <rect key="frame" x="44" y="382" width="125" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="jyO-Rm-Ell"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
+                                <buttonConfiguration key="configuration" style="plain" title="Забыл пароль?">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -64,10 +62,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVc-o2-Q7M">
                                 <rect key="frame" x="44" y="437" width="326" height="50"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Enter">
+                                <buttonConfiguration key="configuration" style="filled" title="Войти">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                    <color key="baseBackgroundColor" red="0.24708711179261356" green="0.24708711179261356" blue="0.24708711179261356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" systemColor="linkColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iC8-Eu-bR2"/>
@@ -82,7 +80,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.20392158630000001" green="0.47058826679999999" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="aPy-6N-GRR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="0MZ-8Y-BLU"/>
@@ -107,6 +105,10 @@
                             <constraint firstItem="16O-uE-jm6" firstAttribute="top" secondItem="DEf-32-Fm5" secondAttribute="bottom" constant="24" id="zsD-wz-M8r"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="DEf-32-Fm5" id="Bew-Nl-PX8"/>
+                        <outlet property="passwordTextField" destination="16O-uE-jm6" id="nGM-AM-BOd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,25 +9,47 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var loginTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupTextFields()
     }
 
     @IBAction func didTapOnButton(_ sender: UIButton) {
+        print("didTapOnButton")
         
-        print("Hello Bro!")
-        
     }
     
-    @IBAction func tapRegButton(_ sender: UIButton) {
-        print("Введите номер телефона")
-    }
+//    @IBAction func tapRegButton(_ sender: UIButton) {
+//        print("Введите номер телефона")
+//    }
+//
+//    @IBAction func tapForgPassButton(_ sender: UIButton) {
+//        print("Напомнить пароль")
+//    }
     
-    @IBAction func tapForgPassButton(_ sender: UIButton) {
-        print("Напомнить пароль")
-    }
-    
-
 }
+
+private extension ViewController {
+    func setupTextFields() {
+        passwordTextField.keyboardType = .numberPad
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
