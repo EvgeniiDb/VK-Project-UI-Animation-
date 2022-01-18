@@ -21,18 +21,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnButton(_ sender: UIButton) {
-        guard let loginText = loginTextField.text,
-              let passwordText = passwordTextField.text else {
-                  return
-              }
         
-        if loginText == "hello" && passwordText == "12345" {
-            print("Successfull login")
-        }
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard identifier == "loginSeque" else { return false }
+        //print(identifier, "👍👍👍👍👍")
+        
+        if checkForValidationData() {
+            return true
+        } else {
+            showAlert()
+            return false
+        }
+    
+    }
+    
+    
     @IBAction func tapRegButton(_ sender: UIButton) {
-        print("Введите номер телефона")
+        print("Введите номер телефона или email")
     }
 
     @IBAction func tapForgPassButton(_ sender: UIButton) {
@@ -50,9 +57,34 @@ private extension ViewController {
     internal override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true) //необходимо уточнить правильность написания данного кода
     }
+ 
+    func checkForValidationData() -> Bool {
+        
+        guard let loginText = loginTextField.text,
+              let passwordText = passwordTextField.text else {
+                  return false
+              }
+        
+        let isValidData = loginText == "hello" && passwordText == "12345"
+        return isValidData
+    }
+ 
+    func showAlert() {
+        let alertViewController = UIAlertController(title: "Ошибка", message: "Вы ввели не верные данные", preferredStyle: .alert)
+        let firstButton = UIAlertAction(title: "One", style: .default, handler: nil)
+        let secondButton = UIAlertAction(title: "Two", style: .destructive, handler: nil)
+        let doneButton = UIAlertAction(title: "OK", style: .cancel, handler: { _ in
+            self.passwordTextField.text = ""
+            self.loginTextField.text = "" //очищает текстфилд при не верном вводе
+        })
+        alertViewController.addAction(doneButton) //OK
+        alertViewController.addAction(firstButton) //One
+        alertViewController.addAction(secondButton) //Two
+        
+        present(alertViewController, animated: true, completion: nil)
+    }
     
 }
-
 
 
 
