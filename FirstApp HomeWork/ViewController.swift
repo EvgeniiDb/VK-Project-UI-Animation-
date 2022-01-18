@@ -25,8 +25,8 @@ class ViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard identifier == "loginSeque" else { return false }
-        //print(identifier, "👍👍👍👍👍")
+        guard identifier == "loginSegue" else { return false }
+    
         
         if checkForValidationData() {
             return true

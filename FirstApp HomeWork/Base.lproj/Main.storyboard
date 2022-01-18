@@ -70,7 +70,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iC8-Eu-bR2"/>
-                                    <segue destination="9k3-so-aqh" kind="show" id="khe-pG-C0Z"/>
+                                    <segue destination="9k3-so-aqh" kind="push" identifier="loginSegue" id="sXV-0O-ksK"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vkontakte_PNG14" translatesAutoresizingMaskIntoConstraints="NO" id="gdD-AN-bup">
@@ -187,10 +187,11 @@
             </objects>
             <point key="canvasLocation" x="3499" y="-267"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="W27-0o-idM">
             <objects>
                 <navigationController id="sOS-os-EuC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="12Y-5u-wYe"/>
                     <navigationItem key="navigationItem" id="Qi9-Rk-a1F"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cgj-Vx-9Mf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -236,10 +237,11 @@
             </objects>
             <point key="canvasLocation" x="2617" y="419"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="2ha-8z-Ww8">
             <objects>
                 <navigationController id="XZu-lw-lOP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9C3-X0-50f"/>
                     <navigationItem key="navigationItem" id="4AP-Vn-vFq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ps-dg-cwn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -286,15 +288,15 @@
         <scene sceneID="oZX-wl-0Ax">
             <objects>
                 <tabBarController modalPresentationStyle="fullScreen" id="9k3-so-aqh" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="NCd-NH-Prc"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="NCd-NH-Prc"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AtV-7B-dL3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="sOS-os-EuC" kind="show" id="Y7L-GD-xlH"/>
-                        <segue destination="XZu-lw-lOP" kind="show" id="Icj-O5-M8Q"/>
+                        <segue destination="sOS-os-EuC" kind="relationship" relationship="viewControllers" id="AXd-7r-7OO"/>
+                        <segue destination="XZu-lw-lOP" kind="relationship" relationship="viewControllers" id="Eu4-ti-ZWo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcV-4E-8tt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
