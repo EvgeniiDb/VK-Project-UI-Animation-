@@ -70,7 +70,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iC8-Eu-bR2"/>
-                                    <segue destination="9k3-so-aqh" kind="push" identifier="loginSegue" id="sXV-0O-ksK"/>
+                                    <segue destination="9k3-so-aqh" kind="show" identifier="loginSegue" id="sXV-0O-ksK"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vkontakte_PNG14" translatesAutoresizingMaskIntoConstraints="NO" id="gdD-AN-bup">
