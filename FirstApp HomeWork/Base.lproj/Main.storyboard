@@ -187,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="3499" y="-267"/>
         </scene>
-        <!--Item-->
+        <!--Navi1-->
         <scene sceneID="W27-0o-idM">
             <objects>
-                <navigationController id="sOS-os-EuC" sceneMemberID="viewController">
+                <navigationController title="Navi1" id="sOS-os-EuC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="12Y-5u-wYe"/>
                     <navigationItem key="navigationItem" id="Qi9-Rk-a1F"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cgj-Vx-9Mf">
@@ -237,10 +237,10 @@
             </objects>
             <point key="canvasLocation" x="2617" y="419"/>
         </scene>
-        <!--Item-->
+        <!--Navi2-->
         <scene sceneID="2ha-8z-Ww8">
             <objects>
-                <navigationController id="XZu-lw-lOP" sceneMemberID="viewController">
+                <navigationController title="Navi2" id="XZu-lw-lOP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="9C3-X0-50f"/>
                     <navigationItem key="navigationItem" id="4AP-Vn-vFq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ps-dg-cwn">
@@ -293,6 +293,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="sOS-os-EuC" kind="relationship" relationship="viewControllers" id="AXd-7r-7OO"/>
