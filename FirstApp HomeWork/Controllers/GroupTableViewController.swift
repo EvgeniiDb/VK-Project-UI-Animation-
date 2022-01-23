@@ -15,10 +15,10 @@ class GroupTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let group1 = Group(name: "My friends", image: UIImage(named: "VK")!)
+        let group1 = Group(name: "My friends", image: UIImage(named: "MyF")!)
         groups.append(group1)
         
-        let group2 = Group(name: "People", image: UIImage(named: "VK")!)
+        let group2 = Group(name: "People", image: UIImage(named: "GP")!)
         groups.append(group2)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

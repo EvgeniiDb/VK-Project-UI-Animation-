@@ -14,10 +14,10 @@ class OtherGroupTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let group1 = Group(name: "People one group", image: UIImage(named: "VK")!)
+        let group1 = Group(name: "People one group", image: UIImage(named: "MyF")!)
         groups.append(group1)
         
-        let group2 = Group(name: "People two group", image: UIImage(named: "VK")!)
+        let group2 = Group(name: "People two group", image: UIImage(named: "GP")!)
         groups.append(group2)
 
         // Uncomment the following line to preserve selection between presentations

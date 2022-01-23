@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9k3-so-aqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -190,7 +190,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VK" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-sb-5MC">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-sb-5MC">
                                             <rect key="frame" x="0.0" y="8" width="120" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -213,7 +213,7 @@
         <scene sceneID="W27-0o-idM">
             <objects>
                 <navigationController title="Navi1" id="sOS-os-EuC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="12Y-5u-wYe">
+                    <tabBarItem key="tabBarItem" title="Мои группы" image="arrowshape.turn.up.forward.fill" catalog="system" id="12Y-5u-wYe">
                         <color key="badgeColor" systemColor="systemBackgroundColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="TitleOne" id="Qi9-Rk-a1F"/>
@@ -366,7 +366,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="VK" width="225" height="225"/>
+        <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="vkontakte_PNG14" width="200" height="200"/>
         <namedColor name="AccentColor">

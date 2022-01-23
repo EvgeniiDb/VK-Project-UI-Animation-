@@ -14,10 +14,10 @@ class FriendsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let user1 = User(name: "Igor", image: UIImage(named: "VK")!)
+        let user1 = User(name: "Mickey Rourke", image: UIImage(named: "MR")!)
         users.append(user1)
         
-        let user2 = User(name: "Anton", image: UIImage(named: "VK")!)
+        let user2 = User(name: "Don Jonson", image: UIImage(named: "DJ")!)
         users.append(user2)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
