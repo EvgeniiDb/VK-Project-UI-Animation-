@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E64EEF1A279D4C820001748F /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF18279D4C820001748F /* FriendTableViewCell.swift */; };
+		E64EEF1E279D4E5D0001748F /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF1D279D4E5D0001748F /* FriendsTableViewController.swift */; };
+		E64EEF21279D52D00001748F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF20279D52D00001748F /* User.swift */; };
+		E64EEF23279D5A230001748F /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF22279D5A230001748F /* FriendCollectionViewController.swift */; };
+		E64EEF26279D5D600001748F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF25279D5D600001748F /* Group.swift */; };
+		E64EEF28279D5DF80001748F /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF27279D5DF80001748F /* GroupTableViewController.swift */; };
+		E64EEF2A279D64BA0001748F /* FotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF29279D64BA0001748F /* FotoCollectionViewCell.swift */; };
 		E6E990DC27872C0B009787B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E990DB27872C0B009787B8 /* AppDelegate.swift */; };
 		E6E990DE27872C0B009787B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E990DD27872C0B009787B8 /* SceneDelegate.swift */; };
 		E6E990E027872C0B009787B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E990DF27872C0B009787B8 /* ViewController.swift */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E64EEF18279D4C820001748F /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		E64EEF1D279D4E5D0001748F /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		E64EEF20279D52D00001748F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E64EEF22279D5A230001748F /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
+		E64EEF25279D5D600001748F /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		E64EEF27279D5DF80001748F /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
+		E64EEF29279D64BA0001748F /* FotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E6E990D827872C0B009787B8 /* FirstApp HomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FirstApp HomeWork.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E990DB27872C0B009787B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E990DD27872C0B009787B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +53,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E64EEF17279D4C150001748F /* TVCells */ = {
+			isa = PBXGroup;
+			children = (
+				E64EEF18279D4C820001748F /* FriendTableViewCell.swift */,
+			);
+			path = TVCells;
+			sourceTree = "<group>";
+		};
+		E64EEF1C279D4DE50001748F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E64EEF1D279D4E5D0001748F /* FriendsTableViewController.swift */,
+				E64EEF22279D5A230001748F /* FriendCollectionViewController.swift */,
+				E64EEF27279D5DF80001748F /* GroupTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E64EEF1F279D528B0001748F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E64EEF20279D52D00001748F /* User.swift */,
+				E64EEF25279D5D600001748F /* Group.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E6E990CF27872C0B009787B8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +99,9 @@
 		E6E990DA27872C0B009787B8 /* FirstApp HomeWork */ = {
 			isa = PBXGroup;
 			children = (
+				E64EEF1F279D528B0001748F /* Model */,
+				E64EEF1C279D4DE50001748F /* Controllers */,
+				E64EEF17279D4C150001748F /* TVCells */,
 				E6E990DB27872C0B009787B8 /* AppDelegate.swift */,
 				E6E990DD27872C0B009787B8 /* SceneDelegate.swift */,
 				E6E990DF27872C0B009787B8 /* ViewController.swift */,
@@ -66,6 +110,7 @@
 				E6E990E427872C0C009787B8 /* Assets.xcassets */,
 				E6E990E627872C0C009787B8 /* LaunchScreen.storyboard */,
 				E6E990E927872C0C009787B8 /* Info.plist */,
+				E64EEF29279D64BA0001748F /* FotoCollectionViewCell.swift */,
 			);
 			path = "FirstApp HomeWork";
 			sourceTree = "<group>";
@@ -141,10 +186,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64EEF26279D5D600001748F /* Group.swift in Sources */,
+				E64EEF2A279D64BA0001748F /* FotoCollectionViewCell.swift in Sources */,
 				E6E990E027872C0B009787B8 /* ViewController.swift in Sources */,
 				E6E990DC27872C0B009787B8 /* AppDelegate.swift in Sources */,
+				E64EEF28279D5DF80001748F /* GroupTableViewController.swift in Sources */,
+				E64EEF23279D5A230001748F /* FriendCollectionViewController.swift in Sources */,
+				E64EEF1E279D4E5D0001748F /* FriendsTableViewController.swift in Sources */,
+				E64EEF1A279D4C820001748F /* FriendTableViewCell.swift in Sources */,
 				E6E990DE27872C0B009787B8 /* SceneDelegate.swift in Sources */,
 				E6E990F0278732F5009787B8 /* TestButton.swift in Sources */,
+				E64EEF21279D52D00001748F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
