@@ -7,18 +7,26 @@
 
 import UIKit
 
-private let reuseIdentifier = "FotoCell"
+//private let reuseIdentifier = "FotoCell"
 
 class FriendCollectionViewController: UICollectionViewController {
 
+    let fotos = ["MR", "DJ"]
+    
+   
+    @IBOutlet weak var FotoCollectionView: FotoCollectionViewCell!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView.delegate = self
+        collectionView.dataSource = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -43,12 +51,14 @@ class FriendCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return fotos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.contentView.backgroundColor = .green
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FotoCell", for: indexPath) as! FotoCollectionViewCell
+        cell.FotoImageView.image = UIImage(named: fotos[indexPath.row])
+        cell.layer.cornerRadius = cell.frame.height / 2
+        //cell.contentView.backgroundColor = .green
         // Configure the cell
     
         return cell
