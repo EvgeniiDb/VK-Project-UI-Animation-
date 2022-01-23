@@ -14,6 +14,7 @@
 		E64EEF26279D5D600001748F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF25279D5D600001748F /* Group.swift */; };
 		E64EEF28279D5DF80001748F /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF27279D5DF80001748F /* GroupTableViewController.swift */; };
 		E64EEF2A279D64BA0001748F /* FotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF29279D64BA0001748F /* FotoCollectionViewCell.swift */; };
+		E64EEF2C279D67E50001748F /* OtherGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF2B279D67E50001748F /* OtherGroupTableViewController.swift */; };
 		E6E990DC27872C0B009787B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E990DB27872C0B009787B8 /* AppDelegate.swift */; };
 		E6E990DE27872C0B009787B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E990DD27872C0B009787B8 /* SceneDelegate.swift */; };
 		E6E990E027872C0B009787B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E990DF27872C0B009787B8 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		E64EEF25279D5D600001748F /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		E64EEF27279D5DF80001748F /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 		E64EEF29279D64BA0001748F /* FotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E64EEF2B279D67E50001748F /* OtherGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherGroupTableViewController.swift; sourceTree = "<group>"; };
 		E6E990D827872C0B009787B8 /* FirstApp HomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FirstApp HomeWork.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E990DB27872C0B009787B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E990DD27872C0B009787B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				E64EEF1D279D4E5D0001748F /* FriendsTableViewController.swift */,
 				E64EEF22279D5A230001748F /* FriendCollectionViewController.swift */,
 				E64EEF27279D5DF80001748F /* GroupTableViewController.swift */,
+				E64EEF2B279D67E50001748F /* OtherGroupTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				E64EEF2A279D64BA0001748F /* FotoCollectionViewCell.swift in Sources */,
 				E6E990E027872C0B009787B8 /* ViewController.swift in Sources */,
 				E6E990DC27872C0B009787B8 /* AppDelegate.swift in Sources */,
+				E64EEF2C279D67E50001748F /* OtherGroupTableViewController.swift in Sources */,
 				E64EEF28279D5DF80001748F /* GroupTableViewController.swift in Sources */,
 				E64EEF23279D5A230001748F /* FriendCollectionViewController.swift in Sources */,
 				E64EEF1E279D4E5D0001748F /* FriendsTableViewController.swift in Sources */,
