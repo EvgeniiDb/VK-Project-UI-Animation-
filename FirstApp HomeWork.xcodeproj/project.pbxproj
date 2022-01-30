@@ -12,12 +12,12 @@
 		E64EEF26279D5D600001748F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF25279D5D600001748F /* Group.swift */; };
 		E64EEF28279D5DF80001748F /* GlobalGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF27279D5DF80001748F /* GlobalGroupTableViewController.swift */; };
 		E64EEF2C279D67E50001748F /* UserGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64EEF2B279D67E50001748F /* UserGroupTableViewController.swift */; };
-		E657CF8A27A6CACF000FF02F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E657CF8827A6CACF000FF02F /* TableViewCell.swift */; };
-		E657CF8B27A6CACF000FF02F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E657CF8927A6CACF000FF02F /* TableViewCell.xib */; };
 		E657CF9527A6EB06000FF02F /* UserTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E657CF9427A6EB06000FF02F /* UserTabBarControllerViewController.swift */; };
 		E657CF9C27A70681000FF02F /* FotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E657CF9A27A70681000FF02F /* FotoCollectionViewCell.swift */; };
 		E657CF9D27A70681000FF02F /* FotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E657CF9B27A70681000FF02F /* FotoCollectionViewCell.xib */; };
 		E657CF9F27A7112A000FF02F /* FriendsFotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E657CF9E27A7112A000FF02F /* FriendsFotoCollectionViewController.swift */; };
+		E657CFA227A71C1D000FF02F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E657CFA027A71C1D000FF02F /* TableViewCell.swift */; };
+		E657CFA327A71C1D000FF02F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E657CFA127A71C1D000FF02F /* TableViewCell.xib */; };
 		E6E990DC27872C0B009787B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E990DB27872C0B009787B8 /* AppDelegate.swift */; };
 		E6E990DE27872C0B009787B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E990DD27872C0B009787B8 /* SceneDelegate.swift */; };
 		E6E990E027872C0B009787B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E990DF27872C0B009787B8 /* ViewController.swift */; };
@@ -33,12 +33,12 @@
 		E64EEF25279D5D600001748F /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		E64EEF27279D5DF80001748F /* GlobalGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupTableViewController.swift; sourceTree = "<group>"; };
 		E64EEF2B279D67E50001748F /* UserGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupTableViewController.swift; sourceTree = "<group>"; };
-		E657CF8827A6CACF000FF02F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		E657CF8927A6CACF000FF02F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		E657CF9427A6EB06000FF02F /* UserTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		E657CF9A27A70681000FF02F /* FotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E657CF9B27A70681000FF02F /* FotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		E657CF9E27A7112A000FF02F /* FriendsFotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsFotoCollectionViewController.swift; sourceTree = "<group>"; };
+		E657CFA027A71C1D000FF02F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E657CFA127A71C1D000FF02F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		E6E990D827872C0B009787B8 /* FirstApp HomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FirstApp HomeWork.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E990DB27872C0B009787B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E990DD27872C0B009787B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,10 +85,10 @@
 		E657CF8527A6C984000FF02F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				E657CF8827A6CACF000FF02F /* TableViewCell.swift */,
-				E657CF8927A6CACF000FF02F /* TableViewCell.xib */,
 				E657CF9A27A70681000FF02F /* FotoCollectionViewCell.swift */,
 				E657CF9B27A70681000FF02F /* FotoCollectionViewCell.xib */,
+				E657CFA027A71C1D000FF02F /* TableViewCell.swift */,
+				E657CFA127A71C1D000FF02F /* TableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E990E827872C0C009787B8 /* LaunchScreen.storyboard in Resources */,
-				E657CF8B27A6CACF000FF02F /* TableViewCell.xib in Resources */,
+				E657CFA327A71C1D000FF02F /* TableViewCell.xib in Resources */,
 				E6E990E527872C0C009787B8 /* Assets.xcassets in Resources */,
 				E657CF9D27A70681000FF02F /* FotoCollectionViewCell.xib in Resources */,
 				E6E990E327872C0B009787B8 /* Main.storyboard in Resources */,
@@ -200,13 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E657CFA227A71C1D000FF02F /* TableViewCell.swift in Sources */,
 				E64EEF26279D5D600001748F /* Group.swift in Sources */,
 				E657CF9C27A70681000FF02F /* FotoCollectionViewCell.swift in Sources */,
 				E6E990E027872C0B009787B8 /* ViewController.swift in Sources */,
 				E6E990DC27872C0B009787B8 /* AppDelegate.swift in Sources */,
 				E64EEF2C279D67E50001748F /* UserGroupTableViewController.swift in Sources */,
 				E657CF9F27A7112A000FF02F /* FriendsFotoCollectionViewController.swift in Sources */,
-				E657CF8A27A6CACF000FF02F /* TableViewCell.swift in Sources */,
 				E64EEF28279D5DF80001748F /* GlobalGroupTableViewController.swift in Sources */,
 				E657CF9527A6EB06000FF02F /* UserTabBarControllerViewController.swift in Sources */,
 				E64EEF1E279D4E5D0001748F /* FriendsTableViewController.swift in Sources */,

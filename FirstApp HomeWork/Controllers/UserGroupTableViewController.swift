@@ -60,7 +60,7 @@ class UserGroupTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierUserGroupCell, for: indexPath)
-                as? UniversalCell else { return UITableViewCell() }
+                as? TableViewCell else { return UITableViewCell() }
         
         cell.configure(group: userGroup[indexPath.row])
         

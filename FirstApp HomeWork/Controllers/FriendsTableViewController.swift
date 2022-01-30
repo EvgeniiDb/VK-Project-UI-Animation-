@@ -73,7 +73,7 @@ class FriendsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierUserTableCell, for: indexPath)
-                as? UniversalCell else { return UITableViewCell() }
+                as? TableViewCell else { return UITableViewCell() }
         
         let arrayLetter = filterByAlphabet(lettersArray: sortingUserNames()[indexPath.section])
         cell.configure(user: arrayLetter[indexPath.row])
@@ -86,7 +86,7 @@ class FriendsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? UniversalCell,
+        guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell,
               let cellObject = cell.savedObject as? User else { return }
         performSegue(withIdentifier: segueIdentifierToFotoController, sender: cellObject)
     }

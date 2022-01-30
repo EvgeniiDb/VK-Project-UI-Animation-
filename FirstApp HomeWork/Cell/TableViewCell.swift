@@ -7,18 +7,16 @@
 
 import UIKit
 
-class UniversalCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var backView: UIView!
     
     @IBOutlet weak var userImage: UIImageView!
     
     @IBOutlet weak var userLabel: UILabel!
     
-    
     var savedObject: Any?
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -68,6 +66,4 @@ class UniversalCell: UITableViewCell {
         userLabel.text = group.name
         userImage.image = group.avatar
     }
-    
-    
 }
