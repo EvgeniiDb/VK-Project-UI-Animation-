@@ -123,7 +123,7 @@
         <!--Root View Controller1-->
         <scene sceneID="GPc-wd-lq0">
             <objects>
-                <tableViewController id="ulu-GY-J6j" customClass="GroupTableViewController" customModule="FirstApp_HomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ulu-GY-J6j" customClass="UserGroupTableViewController" customModule="FirstApp_HomeWork" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="juR-a7-Vdt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,7 +223,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ulu-GY-J6j" kind="relationship" relationship="rootViewController" id="hco-m1-j0J"/>
+                        <segue destination="ulu-GY-J6j" kind="relationship" relationship="rootViewController" id="AJR-t2-c2f"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9r-d5-p5B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -248,7 +248,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <connections>
-                                    <segue destination="EAO-Oy-bMy" kind="show" identifier="" id="4SW-p3-U5I"/>
+                                    <segue destination="EAO-Oy-bMy" kind="show" identifier="segueIdentifierToFotoController" id="odG-EJ-d2b"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -259,9 +259,6 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Root View Controller2" id="iJp-xv-J0Z"/>
-                    <connections>
-                        <outlet property="friendsTableView" destination="K1c-DX-9M2" id="hvA-tw-wmN"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GV-7Y-iOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,7 +281,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="QRr-kP-R0k" kind="relationship" relationship="rootViewController" id="cvo-sb-vgv"/>
+                        <segue destination="QRr-kP-R0k" kind="relationship" relationship="rootViewController" id="Qoo-Pv-vUF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2AJ-3S-h2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -294,14 +291,14 @@
         <!--Мои группы-->
         <scene sceneID="cmw-wL-MyQ">
             <objects>
-                <tableViewController id="s2a-bc-gNj" customClass="OtherGroupTableViewController" customModule="FirstApp_HomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="s2a-bc-gNj" customClass="GlobalGroupTableViewController" customModule="FirstApp_HomeWork" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="YZr-pP-S06">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <color key="sectionIndexBackgroundColor" systemColor="systemYellowColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OtherGroupCell" textLabel="7gA-0V-FhQ" style="IBUITableViewCellStyleDefault" id="gKb-oo-3E3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlobalGroupCell" textLabel="7gA-0V-FhQ" style="IBUITableViewCellStyleDefault" id="gKb-oo-3E3">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gKb-oo-3E3" id="Rtd-ae-hfJ">
@@ -350,8 +347,8 @@
                         </tabBarAppearance>
                     </tabBar>
                     <connections>
-                        <segue destination="XZu-lw-lOP" kind="relationship" relationship="viewControllers" id="Eu4-ti-ZWo"/>
-                        <segue destination="sOS-os-EuC" kind="relationship" relationship="viewControllers" id="t6a-VZ-9Lo"/>
+                        <segue destination="XZu-lw-lOP" kind="relationship" relationship="viewControllers" id="EKH-0S-lNb"/>
+                        <segue destination="sOS-os-EuC" kind="relationship" relationship="viewControllers" id="CR2-GK-RNX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcV-4E-8tt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

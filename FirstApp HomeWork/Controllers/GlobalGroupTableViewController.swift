@@ -37,7 +37,7 @@ class GlobalGroupTableViewController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = false
         self.tableView.delegate = self
         
-        self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierGlobalGroupCell)
+        self.tableView.register(UINib(nibName: "FriendsTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierGlobalGroupCell)
         
         globalGroup = setupGroup()
     }
@@ -54,7 +54,7 @@ class GlobalGroupTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierGlobalGroupCell, for: indexPath)
-                as? TableViewCell else { return UITableViewCell() }
+                as? FriendsTableViewCell else { return UITableViewCell() }
         
         cell.configure(group: globalGroup[indexPath.row])
         
@@ -68,7 +68,7 @@ class GlobalGroupTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell,
+        guard let cell = tableView.cellForRow(at: indexPath) as? FriendsTableViewCell,
               let cellObject = cell.savedObject as? Group else { return }
         
         NotificationCenter.default.post(name: NSNotification.Name("sendGroup"), object: cellObject)

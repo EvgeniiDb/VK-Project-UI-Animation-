@@ -20,7 +20,7 @@ class UserGroupTableViewController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = false
         self.tableView.delegate = self
         
-        self.tableView.register(UINib(nibName: "UniversalCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierUserGroupCell)
+        self.tableView.register(UINib(nibName: "FriendsTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierUserGroupCell)
         
         NotificationCenter.default.addObserver(self, selector: #selector(addNewGroup(_:)), name: NSNotification.Name(rawValue: "sendGroup"), object: nil)
     }
@@ -60,7 +60,7 @@ class UserGroupTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierUserGroupCell, for: indexPath)
-                as? TableViewCell else { return UITableViewCell() }
+                as? FriendsTableViewCell else { return UITableViewCell() }
         
         cell.configure(group: userGroup[indexPath.row])
         

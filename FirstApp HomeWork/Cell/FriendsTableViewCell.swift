@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class FriendsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var backView: UIView!
     

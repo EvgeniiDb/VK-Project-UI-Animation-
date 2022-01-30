@@ -9,10 +9,6 @@ import UIKit
 
 class FriendsTableViewController: UITableViewController {
     
-    
-
-    @IBOutlet var friendsTableView: UITableView!
-    
 
     
     var friendsArray = [User]()
@@ -58,7 +54,7 @@ class FriendsTableViewController: UITableViewController {
         self.tableView.delegate = self
         
         
-        friendsTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierUserTableCell)
+        self.tableView.register(UINib(nibName: "FriendsTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierUserTableCell)
     }
 
     // MARK: - Table view data source
@@ -73,7 +69,7 @@ class FriendsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierUserTableCell, for: indexPath)
-                as? TableViewCell else { return UITableViewCell() }
+                as? FriendsTableViewCell else { return UITableViewCell() }
         
         let arrayLetter = filterByAlphabet(lettersArray: sortingUserNames()[indexPath.section])
         cell.configure(user: arrayLetter[indexPath.row])
@@ -86,7 +82,7 @@ class FriendsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell,
+        guard let cell = tableView.cellForRow(at: indexPath) as? FotoCollectionViewCell,
               let cellObject = cell.savedObject as? User else { return }
         performSegue(withIdentifier: segueIdentifierToFotoController, sender: cellObject)
     }
