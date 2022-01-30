@@ -55,7 +55,7 @@ class FriendsTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "FriendsTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierUserTableCell)
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table view data source.
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sortingUserNames().count
