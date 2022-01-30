@@ -64,7 +64,7 @@ private extension ViewController {
                   return false
               }
         
-        let isValidData = loginText == "hello" && passwordText == "12345"
+        let isValidData = loginText == "1" && passwordText == "1"
         return isValidData
     }
  

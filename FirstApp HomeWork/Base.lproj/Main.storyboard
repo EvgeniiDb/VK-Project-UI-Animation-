@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9k3-so-aqh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -162,6 +162,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="friendsTableView" destination="juR-a7-Vdt" id="tSd-kE-Fcp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elu-FV-cHn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,43 +173,26 @@
         <!--Мои друзья-->
         <scene sceneID="0a8-IT-Fyc">
             <objects>
-                <collectionViewController id="EAO-Oy-bMy" customClass="FriendCollectionViewController" customModule="FirstApp_HomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="EAO-Oy-bMy" customClass="FriendsFotoCollectionViewController" customModule="FirstApp_HomeWork" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5AR-8E-CWT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="BMz-AG-ONr">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="167" height="134"/>
                             <size key="estimatedItemSize" width="150" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="FotoCell" id="9IC-wH-7uo" customClass="FotoCollectionViewCell" customModule="FirstApp_HomeWork" customModuleProvider="target">
-                                <rect key="frame" x="10" y="10" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hyT-cd-WVj">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FotoCell" id="e6R-9R-Pdq">
+                                <rect key="frame" x="10" y="10" width="167" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xZp-8r-3zs">
+                                    <rect key="frame" x="0.0" y="0.0" width="167" height="134"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NC" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-sb-5MC">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="Uxj-nv-7qQ"/>
-                                                <constraint firstAttribute="height" constant="100" id="tSY-ob-1vd"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="HyF-sb-5MC" firstAttribute="centerY" secondItem="hyT-cd-WVj" secondAttribute="centerY" id="69A-NT-MA2"/>
-                                        <constraint firstItem="HyF-sb-5MC" firstAttribute="centerX" secondItem="hyT-cd-WVj" secondAttribute="centerX" id="gRv-lB-Foc"/>
-                                    </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="100" height="100"/>
-                                <connections>
-                                    <outlet property="FotoImageView" destination="HyF-sb-5MC" id="Olb-ar-iod"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -253,21 +239,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" textLabel="BiS-DO-H4M" rowHeight="71" style="IBUITableViewCellStyleDefault" id="CA8-rj-2tG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="71" id="CA8-rj-2tG">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CA8-rj-2tG" id="aT0-0E-DJ5">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BiS-DO-H4M">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="71"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <connections>
@@ -282,6 +259,9 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Root View Controller2" id="iJp-xv-J0Z"/>
+                    <connections>
+                        <outlet property="friendsTableView" destination="K1c-DX-9M2" id="hvA-tw-wmN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GV-7Y-iOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -354,7 +334,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="oZX-wl-0Ax">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="9k3-so-aqh" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="9k3-so-aqh" customClass="UserTabBarControllerViewController" customModule="FirstApp_HomeWork" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Tab Bar Controller" largeTitleDisplayMode="always" id="NCd-NH-Prc">
                         <barButtonItem key="backBarButtonItem" title="Back" id="fDH-ap-kIH"/>
                     </navigationItem>
@@ -380,7 +360,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NC" width="200" height="300"/>
         <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="vkontakte_PNG14" width="200" height="200"/>
