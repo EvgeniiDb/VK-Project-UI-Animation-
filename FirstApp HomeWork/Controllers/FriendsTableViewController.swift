@@ -9,8 +9,6 @@ import UIKit
 
 class FriendsTableViewController: UITableViewController {
     
-
-    
     var friendsArray = [User]()
     var savedObject: Any?
     
