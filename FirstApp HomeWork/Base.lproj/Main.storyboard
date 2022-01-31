@@ -153,9 +153,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="friendsTableView" destination="juR-a7-Vdt" id="tSd-kE-Fcp"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elu-FV-cHn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -192,9 +189,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Мои друзья" id="5JO-wU-tOV"/>
-                    <connections>
-                        <outlet property="FotoCollectionView" destination="5AR-8E-CWT" id="079-Dr-x1x"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sj-d1-Czp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

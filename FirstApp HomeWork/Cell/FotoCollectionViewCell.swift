@@ -89,6 +89,4 @@ class FotoCollectionViewCell: UICollectionViewCell {
             animateCancelLikeButton()
         }
     }
-    
-    
 }

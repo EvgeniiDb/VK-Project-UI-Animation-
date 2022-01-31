@@ -9,7 +9,9 @@ import Foundation
 import UIKit
 
 struct Group {
-    let name: String
+    
+    var name: String
     var avatar: UIImage?
     var description: String?
+    
 }

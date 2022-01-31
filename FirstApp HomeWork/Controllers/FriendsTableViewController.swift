@@ -80,7 +80,7 @@ class FriendsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? FotoCollectionViewCell,
+        guard let cell = tableView.cellForRow(at: indexPath) as? FriendsTableViewCell,
               let cellObject = cell.savedObject as? User else { return }
         performSegue(withIdentifier: segueIdentifierToFotoController, sender: cellObject)
     }
