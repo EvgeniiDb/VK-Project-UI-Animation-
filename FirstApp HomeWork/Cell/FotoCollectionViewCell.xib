@@ -18,6 +18,10 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KdQ-xI-bqv">
                         <rect key="frame" x="-14" y="-12" width="206" height="151"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="206" id="iGS-LJ-iDH"/>
+                            <constraint firstAttribute="height" constant="151" id="nJM-mB-9Ts"/>
+                        </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8u-ou-gRx">
                         <rect key="frame" x="0.0" y="97" width="40" height="30"/>
@@ -53,10 +57,12 @@
                     <constraint firstItem="KdQ-xI-bqv" firstAttribute="top" secondItem="DVd-FG-vIi" secondAttribute="top" constant="-12" id="MQx-rl-6Oa"/>
                     <constraint firstItem="7Q0-oD-fnv" firstAttribute="leading" secondItem="jd3-SL-hpK" secondAttribute="leading" id="NUX-d3-7IZ"/>
                     <constraint firstItem="O8u-ou-gRx" firstAttribute="leading" secondItem="jd3-SL-hpK" secondAttribute="leading" id="RfE-rb-p4y"/>
+                    <constraint firstAttribute="trailing" secondItem="KdQ-xI-bqv" secondAttribute="trailing" constant="-14" id="evM-1s-uI6"/>
                     <constraint firstItem="O8u-ou-gRx" firstAttribute="leading" secondItem="DVd-FG-vIi" secondAttribute="leading" id="ibF-8i-7nt"/>
                     <constraint firstItem="KdQ-xI-bqv" firstAttribute="centerX" secondItem="DVd-FG-vIi" secondAttribute="centerX" id="jh3-t9-WtY"/>
                     <constraint firstItem="KdQ-xI-bqv" firstAttribute="leading" secondItem="DVd-FG-vIi" secondAttribute="leading" constant="-14" id="rrU-ku-xde"/>
                     <constraint firstItem="7Q0-oD-fnv" firstAttribute="centerY" secondItem="jd3-SL-hpK" secondAttribute="centerY" id="sIF-Lk-epB"/>
+                    <constraint firstAttribute="bottom" secondItem="KdQ-xI-bqv" secondAttribute="bottom" constant="-12" id="tnl-3a-B8A"/>
                     <constraint firstItem="7Q0-oD-fnv" firstAttribute="top" secondItem="DVd-FG-vIi" secondAttribute="top" constant="99" id="za9-qe-lFt"/>
                 </constraints>
             </collectionViewCellContentView>
