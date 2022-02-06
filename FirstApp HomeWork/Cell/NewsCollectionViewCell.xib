@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUD-M1-jdh" userLabel="Back View">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="385"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snh-8h-8al" userLabel="News Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Snh-8h-8al" userLabel="News Label">
                                 <rect key="frame" x="0.0" y="0.0" width="400" height="23.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="SeL-Lk-3iF"/>
@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="37.5" width="400" height="312.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNQ-R7-H23" userLabel="Like Button">
-                                <rect key="frame" x="8" y="350" width="37" height="32"/>
+                                <rect key="frame" x="8" y="359" width="37" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="JQw-GL-Dbp"/>
                                 </constraints>
@@ -49,15 +49,15 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-sY-Tss" userLabel="Comment Text Field">
-                                <rect key="frame" x="55" y="349" width="295" height="34"/>
+                                <rect key="frame" x="55" y="353.5" width="295" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="sGk-eg-kj8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXU-tJ-ooB" userLabel="Share News Button">
-                                <rect key="frame" x="360" y="356" width="30" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="6JJ-h3-oAd"/>
-                                </constraints>
+                                <rect key="frame" x="360" y="356" width="30" height="23.5"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="paperplane.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
@@ -69,17 +69,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="i1T-sY-Tss" firstAttribute="centerY" secondItem="QNQ-R7-H23" secondAttribute="centerY" id="29J-Kt-4Yt"/>
+                            <constraint firstItem="i1T-sY-Tss" firstAttribute="top" secondItem="VS7-VH-V6c" secondAttribute="bottom" constant="3.5" id="Igg-iu-lSV"/>
                             <constraint firstItem="QNQ-R7-H23" firstAttribute="leading" secondItem="mUD-M1-jdh" secondAttribute="leading" constant="8" id="JnT-YS-2bR"/>
+                            <constraint firstAttribute="trailing" secondItem="Snh-8h-8al" secondAttribute="trailing" id="K8F-By-IGH"/>
                             <constraint firstAttribute="trailing" secondItem="VS7-VH-V6c" secondAttribute="trailing" id="LnM-bU-RtT"/>
-                            <constraint firstItem="Snh-8h-8al" firstAttribute="leading" secondItem="VS7-VH-V6c" secondAttribute="leading" id="PGh-Xi-Kjt"/>
                             <constraint firstItem="aXU-tJ-ooB" firstAttribute="leading" secondItem="i1T-sY-Tss" secondAttribute="trailing" constant="10" id="Xr4-rP-XGD"/>
                             <constraint firstItem="Snh-8h-8al" firstAttribute="top" secondItem="mUD-M1-jdh" secondAttribute="top" id="XzU-4Q-44x"/>
                             <constraint firstAttribute="bottom" secondItem="VS7-VH-V6c" secondAttribute="bottom" constant="35" id="fLD-oS-7F8"/>
+                            <constraint firstItem="Snh-8h-8al" firstAttribute="leading" secondItem="mUD-M1-jdh" secondAttribute="leading" id="fh4-rH-hH8"/>
                             <constraint firstAttribute="bottom" secondItem="QNQ-R7-H23" secondAttribute="bottom" constant="3" id="grK-WB-ACE"/>
+                            <constraint firstAttribute="bottom" secondItem="i1T-sY-Tss" secondAttribute="bottom" constant="-2.5" id="h2E-QX-wBv"/>
                             <constraint firstItem="i1T-sY-Tss" firstAttribute="leading" secondItem="QNQ-R7-H23" secondAttribute="trailing" constant="10" id="i5T-uX-MVH"/>
-                            <constraint firstItem="QNQ-R7-H23" firstAttribute="centerY" secondItem="i1T-sY-Tss" secondAttribute="centerY" id="oHe-vT-n2u"/>
                             <constraint firstItem="VS7-VH-V6c" firstAttribute="leading" secondItem="mUD-M1-jdh" secondAttribute="leading" id="pxw-gT-CRC"/>
-                            <constraint firstItem="QNQ-R7-H23" firstAttribute="top" secondItem="VS7-VH-V6c" secondAttribute="bottom" id="t3S-gH-b93"/>
                             <constraint firstItem="aXU-tJ-ooB" firstAttribute="top" secondItem="VS7-VH-V6c" secondAttribute="bottom" constant="6" id="wwt-1X-Iyw"/>
                             <constraint firstItem="VS7-VH-V6c" firstAttribute="top" secondItem="Snh-8h-8al" secondAttribute="bottom" constant="14" id="yv3-vu-1PD"/>
                             <constraint firstAttribute="trailing" secondItem="aXU-tJ-ooB" secondAttribute="trailing" constant="10" id="ywe-MD-Egf"/>

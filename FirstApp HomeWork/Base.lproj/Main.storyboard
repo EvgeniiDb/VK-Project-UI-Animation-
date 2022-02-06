@@ -243,6 +243,9 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Root View Controller2" id="iJp-xv-J0Z"/>
+                    <connections>
+                        <outlet property="friendsTableView" destination="K1c-DX-9M2" id="gfT-li-Lnt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GV-7Y-iOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -324,16 +327,79 @@
                     <connections>
                         <segue destination="XZu-lw-lOP" kind="relationship" relationship="viewControllers" id="EKH-0S-lNb"/>
                         <segue destination="sOS-os-EuC" kind="relationship" relationship="viewControllers" id="CR2-GK-RNX"/>
+                        <segue destination="5OO-aS-qRa" kind="relationship" relationship="viewControllers" id="veR-qv-Wd0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcV-4E-8tt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="807" y="68"/>
         </scene>
+        <!--Новости-->
+        <scene sceneID="BTB-1m-0ta">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5OO-aS-qRa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="8" title="Новости" image="doc.richtext.th" catalog="system" id="D63-E3-7BA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CUG-gO-okp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VAE-nn-WJY" kind="relationship" relationship="rootViewController" id="dEN-de-YW7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlT-Pv-ad0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="833"/>
+        </scene>
+        <!--Новости-->
+        <scene sceneID="rys-kl-qhd">
+            <objects>
+                <viewController id="VAE-nn-WJY" customClass="NewsViewController" customModule="FirstApp_HomeWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8TF-Po-pM1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ubl-Sc-gS0">
+                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aq5-54-lpM">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="bFo-Lq-3q7">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6gg-xn-R8s">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZHy-UP-b4N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Новости" id="TSf-Yj-npf"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Ubl-Sc-gS0" id="6k3-55-sJS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQ1-53-w1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652.1739130434785" y="1097.5446428571429"/>
+        </scene>
     </scenes>
     <resources>
         <image name="VK" width="225" height="225"/>
         <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
+        <image name="doc.richtext.th" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
