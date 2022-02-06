@@ -9,14 +9,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var loginTextField: UITextField!
     
+    @IBOutlet var backView: UIView!
+    @IBOutlet weak var titleImageView: UIImageView!
+    @IBOutlet weak var nameProjectLabel: UILabel!
+    
+    @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var loadingView1: UIView!
     @IBOutlet weak var loadingView2: UIView!
     @IBOutlet weak var loadingView3: UIView!
-    
     
     let segueIdentifierToTabBar = "reuseIdentifierToTabBar"
     
@@ -28,11 +31,11 @@ class LoginViewController: UIViewController {
         setupImageLoading()
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(keyboardDie))
-        view.addGestureRecognizer(gestureRecognizer)
+        backView.addGestureRecognizer(gestureRecognizer)
     }
     
     @objc func keyboardDie() {
-        self.view.endEditing(true)
+        self.backView.endEditing(true)
     }
     
     func showAlert(message: String, completion: @escaping (UIAlertAction) -> Void) {
@@ -44,77 +47,31 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButton(_ sender: UIButton) {
-        
-    }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard identifier == "loginSegue" else { return false }
-    
-        
-        if checkForValidationData() {
-            return true
+        if let login = loginTextField.text,
+           let password = passwordTextField.text,
+           !login.isEmpty,
+           !password.isEmpty,
+           login == "1",
+           password == "1" {
+            backView.backgroundColor = #colorLiteral(red: 0, green: 0.03275734931, blue: 0.9962219596, alpha: 1)
+            animatedLoadingLabel()
         } else {
-            showAlert()
-            return false
+            showAlert(message: "Логин или пароль введены неверно, повторите попытку!")
+            { _ in self.backView.backgroundColor = UIColor.red
+                return
+            }
         }
-    
     }
-    
-    
-    @IBAction func tapRegButton(_ sender: UIButton) {
-        print("Введите номер телефона или email")
-    }
-
-    @IBAction func tapForgPassButton(_ sender: UIButton) {
-        print("Напомнить пароль")
-    }
-    
 }
 
-private extension LoginViewController {
-    func setupTextFields() {
-        loginTextField.keyboardType = .emailAddress
-        passwordTextField.keyboardType = .numberPad
-    }
-    
-    internal override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true) //необходимо уточнить правильность написания данного кода
-    }
- 
-    func checkForValidationData() -> Bool {
-        
-        guard let loginText = loginTextField.text,
-              let passwordText = passwordTextField.text else {
-                  return false
-              }
-        
-        let isValidData = loginText == "1" && passwordText == "1"
-        return isValidData
-    }
- 
-    func showAlert() {
-        let alertViewController = UIAlertController(title: "Ошибка", message: "Вы ввели не верные данные", preferredStyle: .alert)
-        let firstButton = UIAlertAction(title: "One", style: .default, handler: nil)
-        let secondButton = UIAlertAction(title: "Two", style: .destructive, handler: nil)
-        let doneButton = UIAlertAction(title: "OK", style: .cancel, handler: { _ in
-            self.passwordTextField.text = ""
-            self.loginTextField.text = "" //очищает текстфилд при не верном вводе
-        })
-        alertViewController.addAction(doneButton) //OK
-        alertViewController.addAction(firstButton) //One
-        alertViewController.addAction(secondButton) //Two
-        
-        present(alertViewController, animated: true, completion: nil)
-    }
-    
-}
-
+// MARK: - Loading indicator animation
 
 extension LoginViewController {
     
     func setupImageLoading() {
         loadingView1.alpha = 0
-        loadingView1.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 0)
+        loadingView1.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         loadingView2.alpha = 0
         loadingView2.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         loadingView3.alpha = 0
