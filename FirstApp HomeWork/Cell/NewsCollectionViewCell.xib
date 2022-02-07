@@ -33,6 +33,10 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VS7-VH-V6c" userLabel="News Image View">
                                 <rect key="frame" x="0.0" y="37.5" width="400" height="312.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="4EZ-kc-nxp"/>
+                                    <constraint firstAttribute="height" constant="312.5" id="O9D-he-YN3"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNQ-R7-H23" userLabel="Like Button">
                                 <rect key="frame" x="8" y="359" width="37" height="23"/>
