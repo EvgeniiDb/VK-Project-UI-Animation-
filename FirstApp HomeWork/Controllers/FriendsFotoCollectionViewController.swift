@@ -9,16 +9,17 @@ import Foundation
 import UIKit
 
 
-private let reuseIdentifier = "FotoCell"
-
 class FriendsFotoCollectionViewController: UICollectionViewController {
+
+    private let reuseIdentifier = "FotoCell"
+    private let segueIdentifierToGalleryPhoto = "segueIdentifierToGalleryPhoto"
     
     var photoArray = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView.delegate = self
+        //self.collectionView.delegate = self
         
         self.collectionView.register(UINib(nibName: "FotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
@@ -41,6 +42,22 @@ class FriendsFotoCollectionViewController: UICollectionViewController {
         
         return cell
     }
+    
+    // MARK: UICollectionViewDelegate
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueIdentifierToGalleryPhoto, sender: photoArray)
+    }
+    
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifierToGalleryPhoto,
+           let dst = segue.destination as? GalleryPhotoViewController {
+            dst.photoArray = self.photoArray
+        }
+    }
+    
 }
 
 extension FriendsFotoCollectionViewController: UICollectionViewDelegateFlowLayout {

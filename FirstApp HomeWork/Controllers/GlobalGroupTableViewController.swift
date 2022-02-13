@@ -13,34 +13,17 @@ class GlobalGroupTableViewController: UITableViewController {
     
     var globalGroup = [Group]()
     
-    func setupGroup() -> [Group] {
-        var resultArray = [Group]()
-        
-        let globalGroupOne = Group(name: "FunGroup VK", avatar: UIImage(named: "1")!, description: nil)
-        resultArray.append(globalGroupOne)
-        
-        let globalGroupTwo = Group(name: "FunGroup Holiwood", avatar: UIImage(named: "GP")!, description: nil)
-        resultArray.append(globalGroupTwo)
-        
-        let globalGroupThree = Group(name: "FunGroup Family", avatar: UIImage(named: "MyF")!, description: nil)
-        resultArray.append(globalGroupThree)
-        
-        let globalGroupFour = Group(name: "FunGroup The Doctor", avatar: UIImage(named: "VR46")!, description: nil)
-        resultArray.append(globalGroupFour)
-        
-        return resultArray
-    }
+    let dataSetingsGroup = DataSettings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.clearsSelectionOnViewWillAppear = false
-        self.tableView.delegate = self
-        
         self.tableView.register(UINib(nibName: "FriendsTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierGlobalGroupCell)
         
-        globalGroup = setupGroup()
+        globalGroup = dataSetingsGroup.setupGroup()
     }
+    
+
 
     // MARK: - Table view data source
 
