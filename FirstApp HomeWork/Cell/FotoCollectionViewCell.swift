@@ -42,6 +42,7 @@ class FotoCollectionViewCell: UICollectionViewCell {
     
     func configure(image: UIImage) {
         photoImageView.image = image
+        
     }
     
     override func awakeFromNib() {

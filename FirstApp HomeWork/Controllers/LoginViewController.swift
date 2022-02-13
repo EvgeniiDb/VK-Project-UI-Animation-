@@ -23,7 +23,6 @@ class LoginViewController: UIViewController {
     
     let segueIdentifierToTabBar = "reuseIdentifierToTabBar"
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +46,6 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButton(_ sender: UIButton) {
-    
         if let login = loginTextField.text,
            let password = passwordTextField.text,
            !login.isEmpty,
@@ -80,21 +78,28 @@ extension LoginViewController {
     
     func animatedLoadingLabel() {
         
-        UIView.animate(withDuration: 1.5, delay: 0.5, options: [.autoreverse, .repeat], animations: {
+        UIView.animate(withDuration: 0.8, delay: 0.2, options: [.autoreverse, .repeat], animations: {
             self.loadingView1.alpha = 1
         }, completion: nil)
         
-        UIView.animate(withDuration: 1.5, delay: 1, options: [.autoreverse, .repeat], animations: {
+        UIView.animate(withDuration: 0.8, delay: 0.4, options: [.autoreverse, .repeat], animations: {
             self.loadingView2.alpha = 1
         }, completion: nil)
         
-        UIView.animate(withDuration: 1.5, delay: 1.5, options: [.autoreverse, .repeat], animations: {
+        UIView.animate(withDuration: 0.8, delay: 0.6, options: [.autoreverse, .repeat], animations: {
             self.loadingView3.alpha = 1
         }, completion: {_ in
             self.performSegue(withIdentifier: self.segueIdentifierToTabBar, sender: nil)
         })
-        
     }
+    
+//    func animatedLoadingLabel2() {
+//        UIView.animate(withDuration: 3.5, delay: 3.5, options: [.repeat], animations: { self.animatedLoadingLabel.alpha = 0
+//        }, completion: {_ in
+//            self.performSegue(withIdentifier: self.segueIdentifierToTabBar, sender: nil)
+//        })
+//    }
+    
 }
 
 

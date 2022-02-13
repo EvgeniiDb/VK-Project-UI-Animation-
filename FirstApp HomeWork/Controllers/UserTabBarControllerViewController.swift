@@ -43,10 +43,18 @@ class UserTabBarControllerViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let friendsNavigationController = self.viewControllers?.first as? UINavigationController,
-           let friendsVC = friendsNavigationController.viewControllers.first as? FriendsTableViewController {
-            friendsVC.configure(userArray: setupUser())
-        }
+        
+        
+        
+        
+        
+        
+        
+        
+//        if let friendsNavigationController = self.viewControllers?.first as? UINavigationController,
+//           let friendsVC = friendsNavigationController.viewControllers.first as? FriendsTableViewController {
+//            friendsVC.configure(userArray: setupUser())
+//        }
     }
 
 }

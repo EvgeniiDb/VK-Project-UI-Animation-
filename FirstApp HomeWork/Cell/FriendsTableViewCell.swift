@@ -25,8 +25,8 @@ class FriendsTableViewCell: UITableViewCell {
         userLabel.font = userLabel.font.withSize(25)
         userLabel.textAlignment = .center
         userLabel.textColor = .black
-        backView.layer.cornerRadius = 40
-        userImage.layer.cornerRadius = 40
+        backView.layer.cornerRadius = 0
+        userImage.layer.cornerRadius = 50
         userImage.backgroundColor = .clear
         backView.layer.shadowColor = UIColor.black.cgColor
         backView.layer.shadowOffset = CGSize(width: 10, height: 10)
